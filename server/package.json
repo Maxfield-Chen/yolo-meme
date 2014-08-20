@@ -3,6 +3,7 @@
   "description": "Play around with an rfid card reader for HackRPI",
   "dependencies": {
     "express": "2.3.x",
+    "serialport": "^1.4.5"
   },
   "engine": "node >= 0.4.1"
 }
