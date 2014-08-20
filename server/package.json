@@ -1,0 +1,8 @@
+{
+  "name": "yolo-memes",
+  "description": "Play around with an rfid card reader for HackRPI",
+  "dependencies": {
+    "express": "2.3.x",
+  },
+  "engine": "node >= 0.4.1"
+}
