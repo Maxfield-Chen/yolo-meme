@@ -12,16 +12,23 @@ app.post("/user/add", function(req,res){
 
 //Rfid response code
 var SerialPort = require("serialport").SerialPort
-//I'm not so sure about this com1 business, would appreciate review
-var serialPort = new SerialPort("/com1", {
+var serialPort = new SerialPort("Com3", {
   baudrate: 9600
 });
 
 serialPort.on("open", function () {
   console.log('open');
+  var dataString = '';
   serialPort.on('data', function(data) {
-    console.log('data received: ' + data);
+    dataString+= data;
+    if(data.toString().indexOf("\n") > -1){
+      console.log('data received: ' + dataString.trim());
+      //res.send(dataString);
+    } else {
+      console.log('adding data');
+    }
   });
+
   serialPort.write("ls\n", function(err, results) {
     console.log('err ' + err);
     console.log('results ' + results);
