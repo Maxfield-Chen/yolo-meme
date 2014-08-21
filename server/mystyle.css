@@ -12,13 +12,22 @@ div {
 	text-align:center;
 	}
 	
-.rpi-logo:hover
+.rpiImage-spin-card1
 {
 -webkit-animation: spin1 2s infinite linear;
 -moz-animation: spin1 2s infinite linear;
 -o-animation: spin1 2s infinite linear;
 -ms-animation: spin1 2s infinite linear;
 animation: spin1 2s infinite linear;
+}
+
+.rpiImage-spin-card2
+{
+-webkit-animation: spin2 2s infinite linear;
+-moz-animation: spin2 2s infinite linear;
+-o-animation: spin2 2s infinite linear;
+-ms-animation: spin2 2s infinite linear;
+animation: spin2 2s infinite linear;
 }
  
 @-webkit-keyframes spin1 {
@@ -40,4 +49,25 @@ animation: spin1 2s infinite linear;
 @-keyframes spin1 {
 0% { transform: rotate(0deg);}
 100% { transform: rotate(360deg);}
+}
+
+@-webkit-keyframes spin2 {
+0% { -webkit-transform: rotate(360deg);}
+100% { -webkit-transform: rotate(0deg);}
+}
+@-moz-keyframes spin2 {
+0% { -moz-transform: rotate(360deg);}
+100% { -moz-transform: rotate(0deg);}
+}
+@-o-keyframes spin2 {
+0% { -o-transform: rotate(360deg);}
+100% { -o-transform: rotate(0deg);}
+}
+@-ms-keyframes spin2 {
+0% { -ms-transform: rotate(360deg);}
+100% { -ms-transform: rotate(0deg);}
+}
+@-keyframes spin2 {
+0% { transform: rotate(360deg);}
+100% { transform: rotate(0deg);}
 }
